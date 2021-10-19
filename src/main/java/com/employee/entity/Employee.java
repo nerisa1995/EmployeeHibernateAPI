@@ -1,25 +1,23 @@
-package com.luv2code.springboot.cruddemo.entity;
+package com.employee.entity;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="employee")
+@Table(name = "employee")
 public class Employee {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 //define fields
-@Column(name="id")
-private int id;
-@Column(name="first_name")
-private String firstName;
-@Column(name="last_name")
-private String lastName;
-@Column(name="email")
-private String email;
+    @Column(name = "id")
+    private int id;
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
+    @Column(name = "email")
+    private String email;
 
-
-    //define constructors
-    public Employee(){
+    public Employee() {
 
     }
 
@@ -28,9 +26,6 @@ private String email;
         this.lastName = lastName;
         this.email = email;
     }
-
-     //define getter/setter
-
 
 
     public String getFirstName() {
@@ -58,12 +53,10 @@ private String email;
     }
 
 
-    //define toString
-
     @Override
     public String toString() {
         return "Employee{" +
-                 "id=" + id +
+                "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
